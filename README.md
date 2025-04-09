@@ -1,55 +1,89 @@
-# React + TypeScript + Vite
+# Sistema de Gestión de Permisos y Licencias
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sistema web para la gestión de permisos y licencias de empleados, con funcionalidades de arrastrar y soltar, menú contextual y soporte multiidioma.
 
-Currently, two official plugins are available:
+## Características
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🎯 Gestión de permisos y licencias en tiempo real
+- 🔄 Drag and Drop para asignar permisos
+- 📅 Vista de calendario con períodos diario/semanal/mensual
+- 🌐 Soporte multiidioma (Español/Inglés)
+- 🖱️ Menú contextual para asignación rápida
+- 🎨 Interfaz moderna y responsive
+- 🔍 Búsqueda y filtrado de empleados
 
-## Expanding the ESLint configuration
+## Tecnologías Utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React 18
+- TypeScript
+- Vite
+- Tailwind CSS
+- Shadcn/ui
+- DND Kit
+- Date-fns
+- Lucide React
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Requisitos Previos
+
+- Node.js (versión 16 o superior)
+- npm o yarn
+
+## Instalación
+
+1. Clonar el repositorio:
+
+```bash
+git clone [url-del-repositorio]
+cd [nombre-del-proyecto]
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Instalar dependencias:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+npm install
 ```
-# atik-ev
+
+3. Instalar librerías específicas:
+
+```bash
+# UI Components y Utilidades
+npm install @radix-ui/react-slot
+npm install @radix-ui/react-select
+npm install @radix-ui/react-popover
+npm install class-variance-authority
+npm install clsx
+npm install tailwind-merge
+
+# Drag and Drop
+npm install @dnd-kit/core
+
+# Fechas
+npm install date-fns
+
+# Iconos
+npm install lucide-react
+
+# Tailwind y sus plugins
+npm install -D tailwindcss
+npm install -D @tailwindcss/forms
+```
+
+4. Iniciar el servidor de desarrollo:
+
+```bash
+npm run dev
+```
+
+## Estructura del Proyecto
+
+src/
+├── components/
+│ ├── ui/ # Componentes base de Shadcn/ui
+│ ├── header.tsx # Encabezado con controles principales
+│ ├── footer.tsx # Pie con leyendas y elementos arrastrables
+│ └── schedule-grid.tsx # Cuadrícula principal de horarios
+├── data/
+│ └── mock-data.ts # Datos de ejemplo
+├── types/
+│ └── index.ts # Definiciones de tipos TypeScript
+└── App.tsx # Componente principal
