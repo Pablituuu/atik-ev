@@ -2,6 +2,12 @@
 
 Sistema web para la gestión de permisos y licencias de empleados, con funcionalidades de arrastrar y soltar, menú contextual y soporte multiidioma.
 
+## Demostración
+
+Mira cómo funciona el sistema:
+
+https://ik.imagekit.io/pablituuu/demo.mp4?updatedAt=1744166265634
+
 ## Características
 
 - 🎯 Gestión de permisos y licencias en tiempo real
@@ -32,8 +38,8 @@ Sistema web para la gestión de permisos y licencias de empleados, con funcional
 1. Clonar el repositorio:
 
 ```bash
-git clone [url-del-repositorio]
-cd [nombre-del-proyecto]
+git clone https://github.com/Pablituuu/atik-ev
+cd atik-ev
 ```
 
 2. Instalar dependencias:
