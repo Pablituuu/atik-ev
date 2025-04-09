@@ -7,7 +7,6 @@ Sistema web para la gestión de permisos y licencias de empleados, con funcional
 - 🎯 Gestión de permisos y licencias en tiempo real
 - 🔄 Drag and Drop para asignar permisos
 - 📅 Vista de calendario con períodos diario/semanal/mensual
-- 🌐 Soporte multiidioma (Español/Inglés)
 - 🖱️ Menú contextual para asignación rápida
 - 🎨 Interfaz moderna y responsive
 - 🔍 Búsqueda y filtrado de empleados
